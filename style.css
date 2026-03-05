@@ -1,0 +1,245 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #0a1f3d;
+    /* BIRU TUA */
+    scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #0a1f3d;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #facc15;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: bold;
+}
+
+/* ================= SECTION ================= */
+section {
+    padding: 120px 60px;
+    min-height: 100vh;
+    background: #0a1f3d;
+    /* SEMUA BIRU TUA */
+}
+
+/* ================= HOME ================= */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e5e7eb;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* ================= FOTO PROFIL ANIMASI ================= */
+.home-img {
+    width: 260px;
+    height: 260px;
+    min-width: 260px;
+    min-height: 260px;
+    border-radius: 50%;
+    border: 5px solid #facc15;
+    /* kuning */
+    background-image: url("image/riska-animasi.png");
+    /* FOTO ANIMASI */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+        0 0 20px rgba(250, 204, 21, 0.6),
+        0 0 40px rgba(250, 204, 21, 0.4),
+        0 0 60px rgba(250, 204, 21, 0.2);
+    transition: 0.4s ease;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Hover glow */
+.home-img:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 25px rgba(250, 204, 21, 0.9),
+        0 0 50px rgba(250, 204, 21, 0.6),
+        0 0 80px rgba(250, 204, 21, 0.4);
+}
+
+/* Animasi floating */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ================= TEXT HOME ================= */
+.home-text h1 {
+    font-size: 42px;
+    color: #ffffff;
+}
+
+.home-text span {
+    color: #facc15;
+}
+
+.home-text p {
+    margin-top: 10px;
+    color: #cbd5e1;
+}
+
+.home-text button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background: #facc15;
+    color: #0a1f3d;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-text button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.6);
+}
+
+/* ================= ABOUT ================= */
+.about {
+    text-align: center;
+    color: #e5e7eb;
+}
+
+.about h2 {
+    color: #facc15;
+}
+
+/* ================= PROJECT ================= */
+.project {
+    text-align: center;
+    color: #e5e7eb;
+}
+
+.project h2 {
+    color: #facc15;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* KOTAK PROJECT = KUNING */
+.card {
+    background: #facc15;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #0a1f3d;
+}
+
+.card p {
+    color: #1e293b;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    text-align: center;
+    color: #e5e7eb;
+}
+
+.contact h2 {
+    color: #facc15;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #020617;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    section {
+        padding: 120px 30px;
+    }
+
+    .home-text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .home-text p {
+        text-align: center;
+    }
+
+    .home-container {
+        justify-content: center;
+    }
+
+    .home-img {
+        width: 200px;
+        height: 200px;
+        min-width: 200px;
+        min-height: 200px;
+    }
+}
